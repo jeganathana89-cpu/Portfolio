@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeganathan A — Digital Marketer &amp; AI Growth Specialist</title>
+<meta name="description" content="Jeganathan A — Digital marketer specializing in SEO, social media management, content strategy, lead generation and AI-powered growth tools.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NOISE + CURSOR GLOW ============ -->
+<div class="noise-layer" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ PAGE LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-mark">JA</div>
+  <div class="loader-bar"><span id="loaderProgress"></span></div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">JEGANATHAN<span>.A</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active-link" data-nav>Home</a>
+      <a href="#about" class="nav-link" data-nav>About</a>
+      <a href="#stack" class="nav-link" data-nav>Skills</a>
+      <a href="#work" class="nav-link" data-nav>Experience</a>
+      <a href="#services" class="nav-link" data-nav>Services</a>
+      <a href="#contact" class="nav-link" data-nav>Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav-cta">
+      <span>Let's Talk</span>
+    </a>
+
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-nav>Home</a>
+  <a href="#about" data-nav>About</a>
+  <a href="#stack" data-nav>Skills</a>
+  <a href="#work" data-nav>Experience</a>
+  <a href="#services" data-nav>Services</a>
+  <a href="#contact" data-nav>Contact</a>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+
+  <div class="hero-blur blur-a" aria-hidden="true"></div>
+  <div class="hero-blur blur-b" aria-hidden="true"></div>
+  <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+
+  <div class="hero-inner">
+
+    <div class="hero-left" data-reveal>
+      <span class="status-pill"><i></i>Available for work</span>
+
+      <h1 class="hero-headline">
+        <span class="headline-lead">Hi, I'm a</span>
+        <span class="headline-role-wrap"><span class="headline-role" id="typedRole"></span><span class="role-cursor">|</span></span>
+      </h1>
+
+      <p class="hero-desc">
+        I build growth engines out of content, search and AI — turning attention into real, trackable results for the brands I work with.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary magnetic">Hire Me</a>
+        <a href="#" class="btn btn-glass magnetic" id="resumeBtn">Download Resume</a>
+      </div>
+    </div>
+
+    <div class="hero-bento" data-reveal>
+
+      <div class="bento-card project-card">
+        <div class="project-card-top">
+          <h4>Jeganathan A</h4>
+          <p>Chennai, India</p>
+        </div>
+        <div class="project-preview" aria-hidden="true">
+          <span style="height:35%"></span><span style="height:60%"></span><span style="height:45%"></span>
+          <span style="height:80%"></span><span style="height:55%"></span><span style="height:70%"></span>
+        </div>
+        <div class="project-card-bottom">
+          <span class="project-pill"><i></i>AI GROWTH EXPERT</span>
+          <span class="project-rate">SEO · Content · Leads</span>
+        </div>
+      </div>
+
+      <div class="bento-card portrait-cell">
+        <div class="portrait-card" id="portraitRing">
+          <div class="portrait-glow"></div>
+          <div class="portrait-frame">
+            <img src="assets/jeganathan.png" alt="Portrait of Jeganathan A" class="portrait-img" id="portraitImg"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+          </div>
+        </div>
+      </div>
+
+      <div class="social-cell">
+        <a href="https://www.linkedin.com/in/jeganathan-a-b4935030a/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="mailto:jeganathana89@gmail.com" class="social-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2 5h20v14H2V5zm2 2v.01L12 13l8-5.99V7H4zm16 2.24-7.4 5.55a1 1 0 0 1-1.2 0L4 9.24V17h16V9.24z"/></svg>
+        </a>
+        <a href="tel:9025063242" class="social-icon" aria-label="Phone">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+        </a>
+      </div>
+
+      <div class="bento-card brands-card">
+        <p>Tools &amp; platforms I use daily</p>
+        <div class="brand-row">
+          <span>Ahrefs</span><span>ChatGPT</span><span>Apollo.io</span><span>Canva</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="section-inner about-grid">
+
+    <div class="about-image" data-reveal>
+      <div class="about-image-frame">
+        <img src="assets/jeganathan.png" alt="Jeganathan A">
+      </div>
+      <div class="about-tag">Chennai, India</div>
+    </div>
+
+    <div class="about-content" data-reveal>
+      <p class="eyebrow">About Me</p>
+      <h2 class="section-title">Digital dreams,<br>real results.</h2>
+
+      <p class="about-text">
+        I'm a digital marketer with hands-on experience managing social media pages, running SEO campaigns,
+        generating qualified leads, and writing content that converts. Along the way I've leaned heavily on
+        AI-powered platforms to work faster and find better prospects — turning research and outreach that
+        used to take days into workflows that take hours.
+      </p>
+      <p class="about-text">
+        What drives me is simple: I enjoy helping businesses grow online through content and strategy that
+        bring real, measurable results. Whether it's a manuscript-publishing company or a software house,
+        I bring the same process — understand the audience, build the content engine, and generate leads
+        that are actually worth following up on.
+      </p>
+
+      <div class="about-stats">
+        <div class="stat-card" data-reveal>
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Companies</span>
+        </div>
+        <div class="stat-card" data-reveal>
+          <span class="stat-num" data-count="18">0</span>
+          <span class="stat-label">Growth Tools</span>
+        </div>
+        <div class="stat-card" data-reveal>
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Platforms Managed</span>
+        </div>
+        <div class="stat-card" data-reveal>
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">Service Areas</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SKILLS / GROWTH STACK ============ -->
+<section class="stack" id="stack">
+  <div class="section-inner">
+    <p class="eyebrow center">Growth Stack</p>
+    <h2 class="section-title center">The tools behind the results</h2>
+    <p class="section-sub center">Eighteen platforms I use daily across research, outreach, SEO and content — organized by what they're built to do.</p>
+
+    <div class="stack-groups">
+
+      <div class="stack-group" data-reveal>
+        <h3 class="stack-group-title"><span class="dot dot-purple"></span>Lead Generation &amp; Outreach</h3>
+        <div class="tool-grid">
+          <div class="tool-card"><span class="tool-name">Apollo.io</span><span class="tool-desc">B2B contact database &amp; sales automation</span></div>
+          <div class="tool-card"><span class="tool-name">Instantly.AI</span><span class="tool-desc">Automated cold email at scale</span></div>
+          <div class="tool-card"><span class="tool-name">Wiza</span><span class="tool-desc">Verified leads from Sales Navigator</span></div>
+          <div class="tool-card"><span class="tool-name">Clay</span><span class="tool-desc">Lead enrichment &amp; outreach triggers</span></div>
+          <div class="tool-card"><span class="tool-name">Hunter.io</span><span class="tool-desc">Email finding &amp; verification</span></div>
+          <div class="tool-card"><span class="tool-name">Lusha</span><span class="tool-desc">Verified contact enrichment</span></div>
+          <div class="tool-card"><span class="tool-name">SalesHandy</span><span class="tool-desc">Email tracking &amp; follow-ups</span></div>
+          <div class="tool-card"><span class="tool-name">Fullenrich</span><span class="tool-desc">AI-powered lead &amp; SEO suite</span></div>
+        </div>
+      </div>
+
+      <div class="stack-group" data-reveal>
+        <h3 class="stack-group-title"><span class="dot dot-blue"></span>SEO &amp; Research</h3>
+        <div class="tool-grid">
+          <div class="tool-card"><span class="tool-name">Ahrefs</span><span class="tool-desc">Keyword, backlink &amp; site audits</span></div>
+          <div class="tool-card"><span class="tool-name">SEMrush</span><span class="tool-desc">SEO, SEM &amp; competitor analysis</span></div>
+          <div class="tool-card"><span class="tool-name">SpyFu</span><span class="tool-desc">Competitor keyword intelligence</span></div>
+          <div class="tool-card"><span class="tool-name">Ubersuggest</span><span class="tool-desc">Keyword ideas &amp; SEO audits</span></div>
+          <div class="tool-card"><span class="tool-name">Google Keyword Planner</span><span class="tool-desc">Search volume &amp; bid data</span></div>
+          <div class="tool-card"><span class="tool-name">Apify</span><span class="tool-desc">Web scraping &amp; data automation</span></div>
+        </div>
+      </div>
+
+      <div class="stack-group" data-reveal>
+        <h3 class="stack-group-title"><span class="dot dot-green"></span>Content &amp; AI</h3>
+        <div class="tool-grid">
+          <div class="tool-card"><span class="tool-name">ChatGPT</span><span class="tool-desc">Content, SEO &amp; campaign copy</span></div>
+          <div class="tool-card"><span class="tool-name">Perplexity AI</span><span class="tool-desc">Real-time research with citations</span></div>
+          <div class="tool-card"><span class="tool-name">Canva</span><span class="tool-desc">Social graphics &amp; presentations</span></div>
+          <div class="tool-card"><span class="tool-name">Excel</span><span class="tool-desc">Lead tracking, reporting, analysis</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE (reframed from Projects) ============ -->
+<section class="work" id="work">
+  <div class="section-inner">
+    <p class="eyebrow center">Experience</p>
+    <h2 class="section-title center">Where I've put it into practice</h2>
+    <p class="section-sub center">Three companies, one consistent playbook: social media, SEO content, and lead generation that's tracked and followed through.</p>
+
+    <div class="work-grid">
+
+      <article class="work-card tilt-card" data-reveal>
+        <div class="work-card-glow"></div>
+        <div class="work-card-head">
+          <span class="work-index">01</span>
+          <h3>Kryon Knowledge Works</h3>
+        </div>
+        <p class="work-company-desc">
+          A software and publishing partner working across AI, cloud services, SaaS development and data
+          innovation, with over 25 years of experience delivering tech-driven strategies.
+        </p>
+        <p class="work-my-role">
+          Managed social presence across Instagram, Facebook and LinkedIn — planning content and posting
+          schedules to grow engagement and visibility. Wrote SEO-optimized blogs and articles to drive
+          organic traffic, and ran lead generation, logging and tracking qualified leads in Google Sheets.
+        </p>
+        <div class="work-tags">
+          <span>Social Media</span><span>SEO Writing</span><span>Lead Gen</span>
+        </div>
+        <a href="https://kryonknowledgeworks.com/" target="_blank" rel="noopener" class="work-link magnetic">
+          Visit Company <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M7 17 17 7M17 7H9m8 0v8"/></svg>
+        </a>
+      </article>
+
+      <article class="work-card tilt-card" data-reveal>
+        <div class="work-card-glow"></div>
+        <div class="work-card-head">
+          <span class="work-index">02</span>
+          <h3>Kryon Publishing</h3>
+        </div>
+        <p class="work-company-desc">
+          A Chennai-based publishing house with two decades of experience in manuscript preparation,
+          editorial services, eBook production and digital innovation across media, healthcare and education.
+        </p>
+        <p class="work-my-role">
+          Owned weekly social content — posters, carousels and posts across Instagram, Facebook and LinkedIn —
+          coordinating with the design team and analyzing LinkedIn metrics to sharpen brand visibility.
+          Wrote SEO blogs for organic reach and managed lead generation, tracked systematically in Sheets.
+        </p>
+        <div class="work-tags">
+          <span>Content Design</span><span>LinkedIn Analytics</span><span>SEO Writing</span>
+        </div>
+        <a href="https://kryonpublishing.com/" target="_blank" rel="noopener" class="work-link magnetic">
+          Visit Company <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M7 17 17 7M17 7H9m8 0v8"/></svg>
+        </a>
+      </article>
+
+      <article class="work-card tilt-card" data-reveal>
+        <div class="work-card-glow"></div>
+        <div class="work-card-head">
+          <span class="work-index">03</span>
+          <h3>Techno Kryon</h3>
+        </div>
+        <p class="work-company-desc">
+          A web and mobile app development company spanning cloud services, digital marketing, data science
+          and automation, serving a global clientele with offshore development solutions.
+        </p>
+        <p class="work-my-role">
+          Managed Instagram, Facebook and LinkedIn — creating and scheduling content to build brand visibility —
+          and crafted SEO-optimized blogs and articles to grow organic traffic and strengthen online presence.
+        </p>
+        <div class="work-tags">
+          <span>Social Media</span><span>SEO Writing</span>
+        </div>
+        <a href="https://www.technokryon.com/" target="_blank" rel="noopener" class="work-link magnetic">
+          Visit Company <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M7 17 17 7M17 7H9m8 0v8"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="timeline-section" id="timeline">
+  <div class="section-inner">
+    <p class="eyebrow center">Path So Far</p>
+    <h2 class="section-title center">A quick timeline</h2>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-tag">Experience</span>
+          <h4>Kryon Knowledge Works</h4>
+          <p>Social media management, SEO content and lead generation.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-tag">Experience</span>
+          <h4>Kryon Publishing</h4>
+          <p>Content design, LinkedIn analytics, SEO writing and lead tracking.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-tag">Experience</span>
+          <h4>Techno Kryon</h4>
+          <p>Social media scheduling and SEO-optimized blog writing.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-tag">Ongoing</span>
+          <h4>AI Growth Toolkit</h4>
+          <p>Continuously testing and adopting new AI tools for SEO, outreach and content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <p class="eyebrow center">Services</p>
+    <h2 class="section-title center">How I can help your business grow</h2>
+
+    <div class="services-grid">
+      <div class="service-card magnetic" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5zm0 8L2 15l10 5 10-5-10-5z"/></svg>
+        </div>
+        <h3>SEO</h3>
+        <p>Boost your organic visibility and drive qualified traffic to your website.</p>
+      </div>
+
+      <div class="service-card magnetic" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M17 20.5c-1.1 0-2-.9-2-2 0-.1 0-.3.1-.4L8.9 14.6c-.4.4-.9.6-1.4.6-1.1 0-2-.9-2-2s.9-2 2-2c.5 0 1 .2 1.4.6l6.2-3.5c-.1-.1-.1-.3-.1-.4 0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2c-.5 0-1-.2-1.4-.6L9.4 12.4c.1.1.1.3.1.4s0 .3-.1.4l6.2 3.5c.4-.4.9-.6 1.4-.6 1.1 0 2 .9 2 2s-.9 2-2 2z"/></svg>
+        </div>
+        <h3>Social Media Management</h3>
+        <p>Creating content and engaging with audiences to build brand presence across LinkedIn, Instagram and Facebook.</p>
+      </div>
+
+      <div class="service-card magnetic" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4 4h16v2H4V4zm0 7h16v2H4v-2zm0 7h10v2H4v-2z"/></svg>
+        </div>
+        <h3>Content Writing &amp; Strategy</h3>
+        <p>Engaging, conversion-focused content that speaks to your audience and supports SEO goals.</p>
+      </div>
+
+      <div class="service-card magnetic" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2a5 5 0 0 1 5 5c0 2-1 3.5-2.5 4.5L15 20H9l.5-8.5C8 10.5 7 9 7 7a5 5 0 0 1 5-5z"/></svg>
+        </div>
+        <h3>Lead Generation</h3>
+        <p>Attracting and converting potential customers through targeted outreach and AI-assisted prospecting.</p>
+      </div>
+
+      <div class="service-card magnetic" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3z"/></svg>
+        </div>
+        <h3>AI Automation</h3>
+        <p>Using AI-powered platforms to speed up research, outreach and reporting workflows.</p>
+      </div>
+
+      <div class="service-card magnetic" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M3 17h4v4H3v-4zm7-8h4v12h-4V9zm7-6h4v18h-4V3z"/></svg>
+        </div>
+        <h3>Landing &amp; Portfolio Pages</h3>
+        <p>Clean, responsive web pages designed to convert visitors into leads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ME ============ -->
+<section class="why" id="why">
+  <div class="section-inner">
+    <p class="eyebrow center">Why Work With Me</p>
+    <h2 class="section-title center">What you can expect</h2>
+
+    <div class="why-grid">
+      <div class="why-card" data-reveal>
+        <span class="why-num">01</span>
+        <h3>Data-driven</h3>
+        <p>Every campaign is backed by keyword and competitor research, not guesswork.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <span class="why-num">02</span>
+        <h3>AI-accelerated</h3>
+        <p>An 18-tool stack means research and outreach that used to take days takes hours.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <span class="why-num">03</span>
+        <h3>Organized &amp; tracked</h3>
+        <p>Every lead is logged and followed through — nothing falls through the cracks.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <span class="why-num">04</span>
+        <h3>Cross-platform</h3>
+        <p>Comfortable across LinkedIn, Instagram and Facebook, tuned to each platform's audience.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <span class="why-num">05</span>
+        <h3>Content that converts</h3>
+        <p>Writing built for both search engines and the humans actually reading it.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <span class="why-num">06</span>
+        <h3>Responsive &amp; reliable</h3>
+        <p>Clear communication and dependable turnaround from first brief to final report.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS (placeholder) ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <p class="eyebrow center">Client Voices</p>
+    <h2 class="section-title center">Testimonials, coming soon</h2>
+    <p class="section-sub center">I'm early in collecting formal client quotes — here's where they'll live. Want to be the first?</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card placeholder-card" data-reveal>
+        <div class="quote-mark">"</div>
+        <div class="placeholder-lines">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="placeholder-person">
+          <div class="placeholder-avatar"></div>
+          <div>
+            <div class="placeholder-name"></div>
+            <div class="placeholder-role"></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card placeholder-card" data-reveal>
+        <div class="quote-mark">"</div>
+        <div class="placeholder-lines">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="placeholder-person">
+          <div class="placeholder-avatar"></div>
+          <div>
+            <div class="placeholder-name"></div>
+            <div class="placeholder-role"></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card cta-card" data-reveal>
+        <h3>Worked with me?</h3>
+        <p>I'd love to feature your feedback here.</p>
+        <a href="#contact" class="btn btn-glass magnetic">Send a Testimonial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="section-inner contact-grid">
+
+    <div class="contact-info" data-reveal>
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Have a project in mind?</h2>
+      <p class="about-text">
+        I'd love to hear from you — whether it's social media management, SEO, lead generation, or content writing,
+        I'm here to support your business goals.
+      </p>
+
+      <div class="contact-details">
+        <a href="mailto:jeganathana89@gmail.com" class="contact-detail">
+          <span class="detail-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2 5h20v14H2V5zm2 2v.01L12 13l8-5.99V7H4zm16 2.24-7.4 5.55a1 1 0 0 1-1.2 0L4 9.24V17h16V9.24z"/></svg>
+          </span>
+          <span>jeganathana89@gmail.com</span>
+        </a>
+        <a href="tel:9025063242" class="contact-detail">
+          <span class="detail-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+          </span>
+          <span>+91 90250 63242</span>
+        </a>
+        <div class="contact-detail">
+          <span class="detail-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </span>
+          <span>Chennai, Tamil Nadu, India</span>
+        </div>
+      </div>
+
+      <div class="contact-cta-buttons">
+        <a href="mailto:jeganathana89@gmail.com" class="btn btn-primary magnetic">Email Me</a>
+        <a href="tel:9025063242" class="btn btn-glass magnetic">Call Me</a>
+      </div>
+
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=13.0607693,80.1763579&z=15&output=embed"
+          width="100%" height="220" style="border:0;" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Jeganathan A — Chennai, Tamil Nadu location">
+        </iframe>
+        <span class="map-tag"><i></i>Chennai, Tamil Nadu</span>
+        <a href="https://www.google.com/maps/@13.0607693,80.1763579,32a,75y,305.62h,74.91t/data=!3m7!1e1!3m5!1susjgGnBLiAfpqsPybjfqfw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D15.089937440854783%26panoid%3DusjgGnBLiAfpqsPybjfqfw%26yaw%3D305.6226182840816!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+           target="_blank" rel="noopener" class="map-link">Open in Maps →</a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap" data-reveal>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Optional">
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit magnetic">
+          <span>Send Message</span>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">JEGANATHAN<span>.A</span></a>
+      <p>Digital marketer helping businesses turn SEO, content and AI tools into real growth.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/jeganathan-a-b4935030a/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="mailto:jeganathana89@gmail.com" class="social-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M2 5h20v14H2V5zm2 2v.01L12 13l8-5.99V7H4zm16 2.24-7.4 5.55a1 1 0 0 1-1.2 0L4 9.24V17h16V9.24z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#about" data-nav>About</a>
+      <a href="#stack" data-nav>Skills</a>
+      <a href="#work" data-nav>Experience</a>
+      <a href="#contact" data-nav>Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Get in Touch</h4>
+      <a href="mailto:jeganathana89@gmail.com">jeganathana89@gmail.com</a>
+      <a href="tel:9025063242">+91 90250 63242</a>
+      <span>Chennai, Tamil Nadu, India</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Jeganathan A. All rights reserved.</p>
+    <p class="built-with">Built with HTML, CSS, JavaScript &amp; GSAP</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
