@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTiltCards();
   initBackToTop();
   initContactForm();
+  initWhatsAppButton();
   initResumeButton();
 });
 
@@ -349,12 +350,50 @@ function initBackToTop(){
 }
 
 /* ==========================================================
-   CONTACT FORM (client-side only demo)
+   CONTACT FORM — sends straight to Gmail via EmailJS
    ========================================================== */
+
+/*
+  ── SETUP (one-time, ~3 minutes) ──
+  1. Create a free account at https://www.emailjs.com
+  2. Add an Email Service connected to your Gmail (jeganathana89@gmail.com)
+  3. Create an Email Template with variables: {{from_name}}, {{from_email}},
+     {{phone}}, {{message}}  — these map to the form fields below.
+  4. Copy your Public Key, Service ID and Template ID and paste them
+     into the three constants below.
+  Until these are filled in, the form automatically falls back to the
+  mailto: link so it never breaks for visitors.
+*/
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'a1B2c3D4e5F6g7H8'
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_gmail'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_contact'
+
+function isEmailJSConfigured(){
+  return typeof emailjs !== 'undefined'
+    && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY'
+    && EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID'
+    && EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID';
+}
+
+function sendViaMailto(form){
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
+  const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+  const body = encodeURIComponent(
+    `${message}\n\n— ${name}\n${email}${form.phone.value ? '\n' + form.phone.value : ''}`
+  );
+  window.location.href = `mailto:jeganathana89@gmail.com?subject=${subject}&body=${body}`;
+}
+
 function initContactForm(){
   const form = document.getElementById('contactForm');
   const note = document.getElementById('formNote');
   if(!form || !note) return;
+
+  if(isEmailJSConfigured()){
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -368,15 +407,66 @@ function initContactForm(){
       return;
     }
 
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `${message}\n\n— ${name}\n${email}${form.phone.value ? '\n' + form.phone.value : ''}`
-    );
-    window.location.href = `mailto:jeganathana89@gmail.com?subject=${subject}&body=${body}`;
+    const submitBtn = form.querySelector('.form-submit');
 
-    note.style.color = 'var(--green)';
-    note.textContent = 'Opening your email client to send this message…';
-    form.reset();
+    if(isEmailJSConfigured()){
+      if(submitBtn) submitBtn.disabled = true;
+      note.style.color = 'var(--green)';
+      note.textContent = 'Sending…';
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: name,
+        from_email: email,
+        phone: form.phone.value.trim() || 'Not provided',
+        message: message
+      }).then(() => {
+        note.style.color = 'var(--green)';
+        note.textContent = 'Message sent — I\'ll get back to you soon!';
+        form.reset();
+      }).catch(() => {
+        note.style.color = '#f87171';
+        note.textContent = 'Something went wrong. Opening your email app instead…';
+        sendViaMailto(form);
+      }).finally(() => {
+        if(submitBtn) submitBtn.disabled = false;
+      });
+    } else {
+      // EmailJS not configured yet — fall back to mailto so the form still works
+      sendViaMailto(form);
+      note.style.color = 'var(--green)';
+      note.textContent = 'Opening your email client to send this message…';
+      form.reset();
+    }
+  });
+}
+
+/* ==========================================================
+   WHATSAPP BUTTON — opens a chat with the form details pre-filled
+   ========================================================== */
+function initWhatsAppButton(){
+  const btn = document.getElementById('whatsappBtn');
+  const form = document.getElementById('contactForm');
+  const note = document.getElementById('formNote');
+  if(!btn || !form) return;
+
+  const WHATSAPP_NUMBER = '919025063242'; // country code + number, no + or spaces
+
+  btn.addEventListener('click', () => {
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if(!name || !message){
+      if(note){
+        note.style.color = '#f87171';
+        note.textContent = 'Please fill in your name and message first.';
+      }
+      return;
+    }
+
+    const text = `Hi Jeganathan, I'm ${name}.\n\n${message}${email ? `\n\nMy email: ${email}` : ''}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener');
   });
 }
 
