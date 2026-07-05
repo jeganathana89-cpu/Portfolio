@@ -364,9 +364,9 @@ function initBackToTop(){
   Until these are filled in, the form automatically falls back to the
   mailto: link so it never breaks for visitors.
 */
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'a1B2c3D4e5F6g7H8'
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_gmail'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_contact'
+const EMAILJS_PUBLIC_KEY  = 'k9DY_XB6z750h_KNp';   // e.g. 'a1B2c3D4e5F6g7H8'
+const EMAILJS_SERVICE_ID  = 'service_o9suah5';   // e.g. 'service_gmail'
+const EMAILJS_TEMPLATE_ID = 'template_w47ay4s';  // e.g. 'template_contact'
 
 function isEmailJSConfigured(){
   return typeof emailjs !== 'undefined'
